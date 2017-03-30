@@ -3,10 +3,14 @@
 # Blender Render Job
 # ------------------
 # Designed to be run in container instanced by AWS Batch
+#
+# Downloads blender file from AWS S3
+# Renders frames in specified range
+# Uploads rendered frames to AWS S3
 # 
 # Parameters: [start frame] [end frame]
 #
-# Environment variables (paths to Amazon S3 files)
+# Environment variables (AWS S3 locations):
 #
 # BLENDER_S3_URL        - source .blend file 
 # FRAME_S3_URL          - destination folder to upload rendered frames to
